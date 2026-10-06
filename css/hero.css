@@ -1,0 +1,120 @@
+/* ---------------------------------------------------------------------------
+ * Hero a pantalla completa: nombre, propuesta de valor, métricas y CTAs.
+ * ------------------------------------------------------------------------ */
+
+.hero {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  padding-block: calc(var(--encabezado-alto) + var(--espacio-4)) var(--espacio-5);
+}
+
+.hero-interior {
+  max-width: var(--contenedor-ancho);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  width: 100%;
+}
+
+.hero-titular {
+  font-size: var(--paso-0);
+  font-weight: 500;
+  color: var(--acento);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-block-end: var(--espacio-2);
+}
+
+.hero-nombre {
+  margin-block-end: var(--espacio-3);
+}
+
+.hero-propuesta {
+  font-size: var(--paso-1);
+  line-height: 1.45;
+  color: var(--texto);
+  max-width: 46ch;
+  margin-block-end: var(--espacio-2);
+}
+
+.hero-ubicacion {
+  font-size: var(--paso--1);
+  color: var(--tenue);
+  margin-block-end: var(--espacio-4);
+}
+
+/* Las 4 métricas como protagonistas */
+.metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(12rem, 100%), 1fr));
+  gap: var(--espacio-3);
+  padding-block: var(--espacio-3);
+  border-block: 1px solid var(--linea);
+  margin-block-end: var(--espacio-4);
+}
+
+.metrica-valor {
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-size: var(--paso-2);
+  font-weight: 700;
+  color: var(--titulos);
+  font-variant-numeric: tabular-nums;
+  line-height: 1.1;
+}
+
+.metrica-etiqueta {
+  display: block;
+  font-size: var(--paso--1);
+  color: var(--tenue);
+  margin-block-start: var(--espacio-1);
+}
+
+/* CTAs */
+.hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-2);
+}
+
+.boton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--espacio-1) var(--espacio-3);
+  font: inherit;
+  font-size: var(--paso-0);
+  font-weight: 500;
+  text-decoration: none;
+  border: 1px solid transparent;
+  border-radius: var(--radio-2);
+  cursor: pointer;
+  transition: background-color var(--transicion), color var(--transicion),
+    border-color var(--transicion);
+}
+
+.boton-primario {
+  background-color: var(--acento);
+  color: var(--acento-texto);
+}
+
+.boton-primario:hover {
+  background-color: var(--titulos);
+  color: var(--acento-texto);
+}
+
+.boton-secundario {
+  background-color: transparent;
+  color: var(--titulos);
+  border-color: var(--linea);
+}
+
+.boton-secundario:hover {
+  border-color: var(--acento);
+  color: var(--acento);
+}
+
+.boton[hidden] {
+  display: none;
+}

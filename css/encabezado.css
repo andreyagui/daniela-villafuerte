@@ -1,0 +1,104 @@
+/* ---------------------------------------------------------------------------
+ * Encabezado fijo con navegación translúcida y botón de tema.
+ * ------------------------------------------------------------------------ */
+
+.encabezado-sitio {
+  position: fixed;
+  inset-block-start: 0;
+  inset-inline: 0;
+  z-index: 100;
+  height: var(--encabezado-alto);
+  background-color: color-mix(in srgb, var(--fondo) 82%, transparent);
+  backdrop-filter: blur(12px) saturate(1.4);
+  -webkit-backdrop-filter: blur(12px) saturate(1.4);
+  border-block-end: 1px solid var(--linea);
+}
+
+.encabezado-interior {
+  max-width: var(--contenedor-ancho);
+  height: 100%;
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--espacio-2);
+}
+
+.marca {
+  font-family: var(--fuente-titulos);
+  font-size: var(--paso-0);
+  font-weight: 600;
+  color: var(--titulos);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.marca:hover {
+  color: var(--acento);
+}
+
+.nav-lista {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: var(--espacio-1) var(--espacio-3);
+}
+
+.nav-enlace {
+  font-size: var(--paso--1);
+  font-weight: 500;
+  color: var(--tenue);
+  text-decoration: none;
+  letter-spacing: 0.01em;
+}
+
+.nav-enlace:hover {
+  color: var(--acento);
+}
+
+/* Botón de tema: oculto por defecto, lo revela js/tema.js */
+.boton-tema {
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 2.5rem;
+  min-height: 2.5rem;
+  padding: var(--espacio-1);
+  font: inherit;
+  font-size: var(--paso--1);
+  font-weight: 500;
+  color: var(--tenue);
+  background-color: transparent;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-2);
+  cursor: pointer;
+}
+
+.boton-tema:hover {
+  color: var(--acento);
+  border-color: var(--acento);
+}
+
+.boton-tema[hidden] {
+  display: none;
+}
+
+/* En celular la navegación se compacta sin scroll horizontal */
+@media (max-width: 48rem) {
+  .encabezado-sitio {
+    height: auto;
+    min-height: var(--encabezado-alto);
+  }
+
+  .encabezado-interior {
+    flex-wrap: wrap;
+    padding-block: var(--espacio-1);
+  }
+
+  .nav-lista {
+    gap: var(--espacio-1) var(--espacio-2);
+  }
+}
