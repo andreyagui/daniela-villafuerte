@@ -1,0 +1,77 @@
+/* ---------------------------------------------------------------------------
+ * Tokens del sistema de diseño
+ * Toda decisión visual (color, tipografía, espaciado, radios, sombras,
+ * movimiento y medidas de retícula) vive acá. Ningún otro archivo
+ * declara valores sueltos: sólo consume estas variables.
+ * ------------------------------------------------------------------------ */
+
+:root {
+  /* Paleta — tema claro (azul marino/grafito con acento bronce) */
+  --fondo: #faf8f4;
+  --fondo-alterno: #f1ede5;
+  --superficie: #ffffff;
+  --texto: #2a313b;
+  --titulos: #16222f;
+  --tenue: #5c6672;
+  --linea: #ddd6c9;
+  --acento: #9a6b2f;
+  --acento-suave: #f0e4d0;
+  --acento-texto: #ffffff;
+
+  /* Tipografía */
+  --fuente-titulos: "Fraunces", Georgia, "Times New Roman", serif;
+  --fuente-cuerpo: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* Escala tipográfica fluida */
+  --paso--1: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem);
+  --paso-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
+  --paso-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
+  --paso-2: clamp(1.5625rem, 1.38rem + 0.9vw, 2rem);
+  --paso-3: clamp(1.953rem, 1.65rem + 1.5vw, 2.75rem);
+  --paso-4: clamp(2.441rem, 1.95rem + 2.4vw, 3.75rem);
+
+  /* Espaciado */
+  --espacio-1: 0.5rem;
+  --espacio-2: 1rem;
+  --espacio-3: 1.5rem;
+  --espacio-4: 2.5rem;
+  --espacio-5: 4rem;
+  --espacio-6: 6rem;
+
+  /* Radios */
+  --radio-1: 0.375rem;
+  --radio-2: 0.75rem;
+  --radio-3: 1.25rem;
+
+  /* Sombras */
+  --sombra-1: 0 1px 2px rgba(22, 34, 47, 0.06), 0 2px 8px rgba(22, 34, 47, 0.05);
+  --sombra-2: 0 4px 12px rgba(22, 34, 47, 0.08), 0 12px 32px rgba(22, 34, 47, 0.08);
+
+  /* Retícula */
+  --contenedor-ancho: 72rem;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+
+  /* Movimiento */
+  --transicion: 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* Encabezado */
+  --encabezado-alto: 4.5rem;
+}
+
+[data-tema="oscuro"] {
+  /* Paleta — tema oscuro */
+  --fondo: #10161e;
+  --fondo-alterno: #151d27;
+  --superficie: #1a2330;
+  --texto: #d5dbe3;
+  --titulos: #eef2f7;
+  --tenue: #98a3b1;
+  --linea: #2a3542;
+  --acento: #c9995c;
+  --acento-suave: #2c2418;
+  --acento-texto: #10161e;
+
+  /* Sombras */
+  --sombra-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
+  --sombra-2: 0 4px 12px rgba(0, 0, 0, 0.45), 0 12px 32px rgba(0, 0, 0, 0.4);
+}
