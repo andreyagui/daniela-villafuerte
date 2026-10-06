@@ -1,0 +1,9 @@
+{
+  "name": "cv-daniela-villafuerte",
+  "private": true,
+  "description": "CV de Daniela Villafuerte Mena",
+  "scripts": {
+    "test": "node test/contenido.test.js",
+    "lint": "node -e \"const h=require('fs').readFileSync('index.html','utf8'); const req=['<!doctype html','<html','lang=','<title','viewport']; const falta=req.filter(r=>!h.toLowerCase().includes(r)); if(falta.length){console.error('falta en index.html:',falta.join(', '));process.exit(1)} console.log('HTML base correcto')\""
+  }
+}

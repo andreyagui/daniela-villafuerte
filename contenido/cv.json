@@ -1,0 +1,138 @@
+{
+  "nombre": "Daniela Villafuerte Mena",
+  "titular": "Senior Agile Scrum Master · Agile Delivery Lead · Product Owner",
+  "sector": "Banca y Seguros",
+  "ubicacion": "Heredia, Costa Rica",
+  "correo": "dvillafuerte93xto@gmail.com",
+  "linkedin": "https://linkedin.com/in/daniela-villafuerte-mena-a70a90159",
+  "metricas": [
+    { "valor": "13 años", "etiqueta": "de experiencia total" },
+    { "valor": "6 equipos", "etiqueta": "hasta 28 personas a cargo" },
+    { "valor": "87+", "etiqueta": "pases exitosos a producción" },
+    { "valor": "20+", "etiqueta": "requerimientos en paralelo" }
+  ],
+  "resumen": "Profesional con 13 años de experiencia y 9 en tecnología, con base administrativa-financiera y trayectoria en Project Management, Product Ownership y liderazgo Agile. Aseguro el delivery tecnológico en banca y seguros (Banco Popular y Popular Seguros), con progresión continua en Babel Group desde 2023: coordino 6 equipos (hasta 28 personas, internos y externos) de desarrollo, infraestructura, negocio y proveedores sobre el core bancario T24 y sistemas de crédito y colocación, gestionando riesgos, dependencias, incidentes, releases y pases a producción en un entorno regulado. Combino visión de negocio, disciplina de entrega y prácticas Scrum, Kanban y SAFe.",
+  "competencias": [
+    { "area": "Delivery y gobierno", "items": "Agile Delivery, gestión de riesgos, dependencias e impedimentos, gestión de incidentes, releases y pases a producción, coordinación de ambientes, gestión de cambios" },
+    { "area": "Agile y producto", "items": "Scrum, Kanban, SAFe, PI Planning, Sprint Planning, Refinement, Product Ownership, gestión y priorización de backlog por valor y dependencias" },
+    { "area": "Liderazgo y stakeholders", "items": "coordinación de equipos multidisciplinarios, gestión de stakeholders (negocio, líderes técnicos, proveedores), escalamiento, gestión de proveedores" },
+    { "area": "Sector financiero", "items": "core bancario T24, requerimientos regulatorios y normativos, banca y seguros" },
+    { "area": "Herramientas", "items": "Azure DevOps, JIRA, Service Manager, Monday, Planner; IA aplicada al rol (comunicación, análisis y refinamiento) con uso responsable" }
+  ],
+  "experiencia": [
+    {
+      "empresa": "Babel Group",
+      "periodo_empresa": "2023 – actualidad",
+      "puestos": [
+        {
+          "cargo": "Senior Agile Scrum Master",
+          "cliente": "Banco Popular",
+          "periodo": "feb 2025 – actualidad",
+          "logros": [
+            "Aseguro el delivery de 6 equipos (crédito y colocación) de hasta 28 personas, internos y externos, coordinando incidentes, desarrollos y proyectos con líderes técnicos, negocio y proveedores externos.",
+            "Scrum Master de ABANKS (2025–2026), iniciativa de alta prioridad y complejidad del banco, coordinando múltiples equipos.",
+            "Doy seguimiento a los requerimientos en paralelo con trazabilidad end-to-end en Azure DevOps (sprints, capacidad y avance de actividades).",
+            "Gestiono y escalo impedimentos, dependencias y riesgos críticos para proteger el cumplimiento de los equipos.",
+            "Oriento releases y pases a producción integrando equipos y ambientes, cuidando calidad y cumplimiento.",
+            "Facilito ceremonias Scrum y doy seguimiento a métricas de flujo para sostener la mejora continua."
+          ]
+        },
+        {
+          "cargo": "Product Owner",
+          "cliente": "Popular Seguros",
+          "periodo": "oct 2024 – feb 2025",
+          "logros": [
+            "Creé y prioricé el backlog (épicas e historias de usuario) con criterios INVEST, según valor y dependencias.",
+            "Lideré refinamientos con negocio para asegurar claridad y criterios de aceptación (DoR/DoD).",
+            "Brindé apoyo dual como Scrum Master a los equipos de desarrollo e infraestructura del proyecto KADSI."
+          ]
+        },
+        {
+          "cargo": "Scrum Master, célula T24",
+          "cliente": "Banco Popular",
+          "periodo": "2023 – 2024",
+          "logros": [
+            "Coordiné los pases a producción de la célula, articulando múltiples áreas y jefaturas.",
+            "Controlé incidentes, desarrollos y proyectos de la célula T24 (19 técnicos internos y externos); goberné el backlog (Top 10, Fast Tracks, Packs y preaprobados) con enfoque en valor y riesgo.",
+            "Coordiné equipos y proveedores, con gestión de impedimentos y trazabilidad en Azure DevOps.",
+            "Brindé soporte a incidentes en producción.",
+            "Participé en requerimientos normativos de alta complejidad del core bancario; en CICAC (2022) actué como Scrum Master coordinando múltiples equipos."
+          ]
+        }
+      ]
+    },
+    {
+      "empresa": "Novacomp",
+      "periodo_empresa": "sep 2021 – 2023",
+      "puestos": [
+        {
+          "cargo": "Scrum Master",
+          "cliente": "Banco Popular",
+          "periodo": "sep 2021 – 2023",
+          "logros": [
+            "Lideré equipos multidisciplinarios en iniciativas core de Banco Popular; facilité PI Planning y sesiones de entendimiento con negocio.",
+            "Gestioné cambios con validación en Service Manager y reporté métricas de la célula.",
+            "Coordiné recursos externos (nacionales e internacionales) y líneas base de versionamiento."
+          ]
+        },
+        {
+          "cargo": "Scrum Master",
+          "cliente": "Junta de Protección Social",
+          "periodo": "sep 2021 – 2023",
+          "logros": [
+            "Coordiné proyectos en distintas intendencias (sorteos, contabilidad, ERP), gestionando incidencias, features, backlog y ceremonias."
+          ]
+        }
+      ]
+    },
+    {
+      "empresa": "ASEGESSA",
+      "periodo_empresa": "feb 2019 – sep 2021",
+      "puestos": [
+        {
+          "cargo": "Administrador",
+          "cliente": "",
+          "periodo": "feb 2019 – sep 2021",
+          "logros": [
+            "Administré integralmente la asociación y lideré un equipo de 8 personas aplicando prácticas ágiles a la operación y estrategia.",
+            "Realicé análisis financiero-administrativo y proyectos para optimizar rentabilidad y mitigar riesgos."
+          ]
+        }
+      ]
+    },
+    {
+      "empresa": "Exdesa S.A.",
+      "periodo_empresa": "ene 2017 – ene 2019",
+      "puestos": [
+        {
+          "cargo": "Development Project Manager",
+          "cliente": "",
+          "periodo": "ene 2017 – ene 2019",
+          "logros": [
+            "Coordiné proyectos y entregables de desarrollo, desde el levantamiento de requerimientos hasta la implementación.",
+            "Gestioné el proyecto de nómina, análisis de datos y asientos contables; orienté a consultores y capacité a más de 36 puntos de venta."
+          ]
+        }
+      ]
+    }
+  ],
+  "nota_experiencia_previa": "Experiencia previa en áreas administrativas y contables, antes de 2017.",
+  "logros": [
+    "Coordinación de 87+ pases exitosos a producción (2023–2024) entre múltiples áreas y jefaturas.",
+    "Liderazgo simultáneo de 6 equipos y seguimiento de 20+ requerimientos en paralelo con trazabilidad end-to-end (2025).",
+    "Entrega en tiempo y forma de requerimientos normativos y estratégicos del banco: CICAC, Emisión MasterCard, IVA Transfronterizo, FT ACFM – Fuera de Monex, SINPE Pagos Inmediatos (PIN-TFT) y ABANKS.",
+    "Definí una guía de 9 buenas prácticas Scrum (refinamiento, dependencias, cambios de prioridad, calidad previa a pases, incidente vs. cambio) y la apliqué en 3 equipos (2026).",
+    "Transición desde finanzas y administración hacia tecnología, Product Ownership y liderazgo Agile, aportando perspectiva de negocio al delivery."
+  ],
+  "educacion": [
+    "Universidad de Ciencias Empresariales — Bachillerato en Contaduría",
+    "Universidad de Ciencias Empresariales — Bachillerato en Administración de Negocios (90 % completado)"
+  ],
+  "certificaciones": [
+    "Scrum Master, Scrum Product Owner, Scrum Fundamentals y Scrum Developer (CertMind)",
+    "Kanban y SAFe",
+    "Liderazgo Ágil desde cero (Udemy, sept 2026, 10 horas)",
+    "Taller «Habilidades del líder» (mar 2026)"
+  ],
+  "idiomas": "Español nativo · Inglés B1"
+}
