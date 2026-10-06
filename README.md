@@ -25,9 +25,9 @@ completa está en `docs/briefs/sitio-editorial.md`.
 - `css/logros.css` — retícula de tarjetas de logros destacados
 - `css/contacto.css` — banda arcilla de contacto y pie
 - `css/impresion.css` — hoja de impresión (fondos claros, sin navegación)
+- `assets/CV_Daniela_Villafuerte_Mena.pdf` — PDF descargable desde el botón "Descargar mi CV" del hero
 - `js/anillos.js` — animación de los anillos al entrar en pantalla
 - `js/contacto.js` — reensamblado del correo ofuscado (mailto en runtime)
-- `js/impresion.js` — botón "Descargar mi CV" → `window.print()`
 - `contenido/cv.json` — fuente de verdad del contenido (verificada por el test)
 
 ## Cómo verlo en local
