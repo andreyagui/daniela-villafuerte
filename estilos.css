@@ -404,3 +404,68 @@ li {
   }
 }
 
+
+
+/* ==========================================================================
+   Impresión: exportación limpia a PDF en 2–3 páginas. Fuerza fondo blanco y
+   texto negro aunque el sistema esté en modo oscuro; no parte puestos.
+   ========================================================================== */
+
+@page {
+  margin: 1.5cm 2cm;
+}
+
+@media print {
+  body {
+    background: #ffffff;
+    color: #1a1a1a;
+    font-size: 11.5pt;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  .metricas .valor {
+    color: #1a1a1a;
+  }
+
+  h1 {
+    font-size: 1.9rem;
+  }
+
+  h2,
+  .empresa-cabecera .periodo-empresa,
+  .puesto-cabecera .periodo,
+  .puesto-cabecera .cliente,
+  .encabezado .sector,
+  .encabezado .ubicacion,
+  .metricas .etiqueta,
+  .nota p {
+    color: #444444;
+  }
+
+  .hoja {
+    padding: 0;
+  }
+
+  section + section {
+    margin-top: var(--espacio-4);
+    padding-top: var(--espacio-4);
+  }
+
+  .empresa,
+  .puesto {
+    break-inside: avoid;
+  }
+
+  a {
+    color: #1a1a1a;
+  }
+
+  a[href^="http"]::after {
+    content: " (" attr(href) ")";
+    font-size: 0.85em;
+    color: #1a1a1a;
+  }
+}
