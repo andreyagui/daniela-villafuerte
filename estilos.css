@@ -387,3 +387,20 @@ li {
     text-align: left;
   }
 }
+
+/* ==========================================================================
+   Modo oscuro: sólo se redefinen las variables de color; todo el contraste
+   sale del sistema de diseño (fondo gris muy oscuro, nunca negro puro)
+   ========================================================================== */
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --fondo: #16181d;
+    --texto: #d6d9de;
+    --titulos: #f2efe8;
+    --tenue: #9aa1ad;
+    --linea: #33383f;
+    --acento: #d29a5b;
+  }
+}
+
