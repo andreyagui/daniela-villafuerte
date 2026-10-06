@@ -6,18 +6,45 @@
   "correo": "dvillafuerte93xto@gmail.com",
   "linkedin": "https://linkedin.com/in/daniela-villafuerte-mena-a70a90159",
   "metricas": [
-    { "valor": "13 años", "etiqueta": "de experiencia total" },
-    { "valor": "6 equipos", "etiqueta": "hasta 28 personas a cargo" },
-    { "valor": "87+", "etiqueta": "pases exitosos a producción" },
-    { "valor": "20+", "etiqueta": "requerimientos en paralelo" }
+    {
+      "valor": "13 años",
+      "etiqueta": "de experiencia total"
+    },
+    {
+      "valor": "6 equipos",
+      "etiqueta": "hasta 28 personas a cargo"
+    },
+    {
+      "valor": "87+",
+      "etiqueta": "pases exitosos a producción"
+    },
+    {
+      "valor": "20+",
+      "etiqueta": "requerimientos en paralelo"
+    }
   ],
   "resumen": "Profesional con 13 años de experiencia y 9 en tecnología, con base administrativa-financiera y trayectoria en Project Management, Product Ownership y liderazgo Agile. Aseguro el delivery tecnológico en banca y seguros (Banco Popular y Popular Seguros), con progresión continua en Babel Group desde 2023: coordino 6 equipos (hasta 28 personas, internos y externos) de desarrollo, infraestructura, negocio y proveedores sobre el core bancario T24 y sistemas de crédito y colocación, gestionando riesgos, dependencias, incidentes, releases y pases a producción en un entorno regulado. Combino visión de negocio, disciplina de entrega y prácticas Scrum, Kanban y SAFe.",
   "competencias": [
-    { "area": "Delivery y gobierno", "items": "Agile Delivery, gestión de riesgos, dependencias e impedimentos, gestión de incidentes, releases y pases a producción, coordinación de ambientes, gestión de cambios" },
-    { "area": "Agile y producto", "items": "Scrum, Kanban, SAFe, PI Planning, Sprint Planning, Refinement, Product Ownership, gestión y priorización de backlog por valor y dependencias" },
-    { "area": "Liderazgo y stakeholders", "items": "coordinación de equipos multidisciplinarios, gestión de stakeholders (negocio, líderes técnicos, proveedores), escalamiento, gestión de proveedores" },
-    { "area": "Sector financiero", "items": "core bancario T24, requerimientos regulatorios y normativos, banca y seguros" },
-    { "area": "Herramientas", "items": "Azure DevOps, JIRA, Service Manager, Monday, Planner; IA aplicada al rol (comunicación, análisis y refinamiento) con uso responsable" }
+    {
+      "area": "Delivery y gobierno",
+      "items": "Agile Delivery, gestión de riesgos, dependencias e impedimentos, gestión de incidentes, releases y pases a producción, coordinación de ambientes, gestión de cambios"
+    },
+    {
+      "area": "Agile y producto",
+      "items": "Scrum, Kanban, SAFe, PI Planning, Sprint Planning, Refinement, Product Ownership, gestión y priorización de backlog por valor y dependencias"
+    },
+    {
+      "area": "Liderazgo y stakeholders",
+      "items": "coordinación de equipos multidisciplinarios, gestión de stakeholders (negocio, líderes técnicos, proveedores), escalamiento, gestión de proveedores"
+    },
+    {
+      "area": "Sector financiero",
+      "items": "core bancario T24, requerimientos regulatorios y normativos, banca y seguros"
+    },
+    {
+      "area": "Herramientas",
+      "items": "Azure DevOps, JIRA, Service Manager, Monday, Planner; IA aplicada al rol (comunicación, análisis y refinamiento) con uso responsable"
+    }
   ],
   "experiencia": [
     {
@@ -134,5 +161,7 @@
     "Liderazgo Ágil desde cero (Udemy, sept 2026, 10 horas)",
     "Taller «Habilidades del líder» (mar 2026)"
   ],
-  "idiomas": "Español nativo · Inglés B1"
+  "idiomas": "Español nativo · Inglés B1",
+  "foto": "assets/daniela.jpg",
+  "saludo": "Hola, soy Daniela, Agile Delivery Lead en banca y seguros, en Costa Rica."
 }

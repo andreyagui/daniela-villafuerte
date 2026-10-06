@@ -55,6 +55,16 @@ debeAparecer(cv.titular, 'titular');
 debeAparecer(cv.ubicacion, 'ubicación');
 debeAparecer(cv.resumen, 'resumen ejecutivo');
 debeAparecer(cv.idiomas, 'idiomas');
+debeAparecer(cv.saludo, 'saludo del hero');
+
+// La foto tiene que estar referenciada en el HTML
+if (!html.includes(cv.foto)) {
+  fallas.push(`foto: el HTML no referencia ${cv.foto}`);
+}
+const fsFoto = require('node:fs');
+if (!fsFoto.existsSync(path.join(RAIZ, cv.foto))) {
+  fallas.push(`foto: falta el archivo ${cv.foto}`);
+}
 
 // --- métricas: valor y etiqueta, los dos -----------------------------------
 cv.metricas.forEach((m, i) => {
