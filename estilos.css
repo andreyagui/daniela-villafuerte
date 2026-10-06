@@ -209,3 +209,148 @@ li {
   letter-spacing: 0.12em;
   color: var(--tenue);
 }
+
+/* ==========================================================================
+   Experiencia: empresas como bloques, puestos subordinados con línea de
+   tiempo discreta (regla vertical fina + marca de acento por puesto)
+   ========================================================================== */
+
+.empresa {
+  margin-top: var(--espacio-5);
+}
+
+.empresa-cabecera {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: var(--espacio-3);
+}
+
+.empresa-cabecera h3 {
+  margin: 0;
+}
+
+.empresa-cabecera .periodo-empresa {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--tenue);
+  text-align: right;
+}
+
+.puesto {
+  position: relative;
+  margin-top: var(--espacio-4);
+  padding-left: var(--espacio-4);
+  border-left: 1px solid var(--linea);
+}
+
+.puesto::before {
+  content: "";
+  position: absolute;
+  left: -4px;
+  top: var(--espacio-2);
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--acento);
+}
+
+.puesto-cabecera {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0 var(--espacio-3);
+}
+
+.puesto-cabecera h4 {
+  margin: 0;
+}
+
+.puesto-cabecera .cliente {
+  margin: 0;
+  color: var(--tenue);
+}
+
+.puesto-cabecera .periodo {
+  margin: 0;
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: var(--tenue);
+  text-align: right;
+}
+
+/* ==========================================================================
+   Listas del CV: viñeta propia (punto chico de acento), sin bullets del
+   navegador
+   ========================================================================== */
+
+.puesto ul,
+.logros-destacados ul,
+.educacion ul,
+.certificaciones ul,
+.competencias ul {
+  list-style: none;
+  margin-top: var(--espacio-2);
+  padding-left: 0;
+}
+
+.puesto ul li,
+.logros-destacados li,
+.educacion li,
+.certificaciones li,
+.competencias li {
+  position: relative;
+  margin-bottom: var(--espacio-2);
+  padding-left: var(--espacio-3);
+}
+
+.puesto ul li::before,
+.logros-destacados li::before,
+.educacion li::before,
+.certificaciones li::before,
+.competencias li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--acento);
+}
+
+/* Competencias: el área como etiqueta y el detalle en cuerpo */
+.competencias li {
+  margin-bottom: var(--espacio-3);
+}
+
+.competencias h3 {
+  margin: 0;
+  font-family: var(--fuente-cuerpo);
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tenue);
+}
+
+.competencias p {
+  margin: 0;
+}
+
+/* Resto de secciones: ritmo consistente */
+.logros-destacados ul,
+.educacion ul,
+.certificaciones ul {
+  margin-top: 0;
+}
+
+.idiomas p {
+  margin: 0;
+}
+
+.nota p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--tenue);
+}
