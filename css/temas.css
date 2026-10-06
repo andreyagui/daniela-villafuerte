@@ -1,0 +1,31 @@
+/* ---------------------------------------------------------------------------
+ * Transición entre temas claro/oscuro y ajustes propios del tema oscuro.
+ * ------------------------------------------------------------------------ */
+
+/* La transición sólo corre cuando el usuario no pidió movimiento reducido */
+@media (prefers-reduced-motion: no-preference) {
+  body,
+  .encabezado-sitio,
+  .competencia,
+  .boton,
+  .boton-tema,
+  .nav-enlace,
+  .pie {
+    transition: background-color var(--transicion), color var(--transicion),
+      border-color var(--transicion);
+  }
+}
+
+/* Ajustes de componentes en oscuro */
+[data-tema="oscuro"] .competencia {
+  box-shadow: none;
+}
+
+[data-tema="oscuro"] .encabezado-sitio {
+  background-color: color-mix(in srgb, var(--fondo) 88%, transparent);
+}
+
+[data-tema="oscuro"] ::selection {
+  background-color: var(--acento);
+  color: var(--acento-texto);
+}
