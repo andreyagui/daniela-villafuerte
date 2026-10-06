@@ -1,0 +1,62 @@
+/* ---------------------------------------------------------------------------
+ * Banda de credenciales: Educación y Certificaciones sobre salvia.
+ * ------------------------------------------------------------------------ */
+
+.banda {
+  margin-inline: var(--borde-lateral);
+}
+
+.banda-salvia {
+  background-color: var(--salvia);
+  padding-block: clamp(3.5rem, 8vw, 6rem);
+}
+
+.credenciales-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+
+.credencial-titulo {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 800;
+  color: var(--blanco);
+}
+
+.credencial-icono {
+  width: 28px;
+  height: 28px;
+  margin-block: 1.25rem;
+  color: var(--blanco);
+  opacity: 0.75;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.credencial-lista li {
+  font-size: 13.5px;
+  line-height: 1.6;
+  color: var(--blanco);
+}
+
+.credencial-lista li + li {
+  margin-block-start: 1.5rem;
+}
+
+.idiomas {
+  margin-block-start: 3rem;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  color: var(--blanco);
+}
+
+@media (max-width: 768px) {
+  .credenciales-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}

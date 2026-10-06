@@ -1,0 +1,59 @@
+/* ---------------------------------------------------------------------------
+ * Logros destacados: retícula de tarjetas con barra superior.
+ * ------------------------------------------------------------------------ */
+
+.logros-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.logro {
+  background-color: var(--blanco);
+  border-radius: var(--radio-tarjeta);
+  box-shadow: var(--sombra-suave);
+  padding: 1.75rem;
+  transition: transform var(--transicion-tarjeta), box-shadow var(--transicion-tarjeta);
+}
+
+.logro::before {
+  content: "";
+  display: block;
+  width: 40px;
+  height: 3px;
+  margin-block-end: 1.1rem;
+  background-color: var(--terracota);
+}
+
+.logro p {
+  font-size: 13.5px;
+  line-height: 1.7;
+  color: var(--tinta);
+}
+
+.logro:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--sombra-alta);
+}
+
+@media (max-width: 960px) {
+  .logros-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 620px) {
+  .logros-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .logro {
+    transition: none;
+  }
+
+  .logro:hover {
+    transform: none;
+  }
+}

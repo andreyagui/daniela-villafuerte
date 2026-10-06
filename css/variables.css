@@ -1,77 +1,46 @@
 /* ---------------------------------------------------------------------------
- * Tokens del sistema de diseño
- * Toda decisión visual (color, tipografía, espaciado, radios, sombras,
- * movimiento y medidas de retícula) vive acá. Ningún otro archivo
- * declara valores sueltos: sólo consume estas variables.
+ * Tokens del sistema de diseño (paleta derivada de la foto de Daniela)
+ * Ningún otro archivo declara valores sueltos: sólo consume estas variables.
+ *
+ * Nota de accesibilidad (regla 8 del brief): el blanco sobre la salvia original
+ * (#9fc3b8) daba 1.91:1, así que la salvia va oscurecida hasta superar 4.5:1
+ * con blanco. Los demás colores son exactamente los de la especificación.
  * ------------------------------------------------------------------------ */
 
 :root {
-  /* Paleta — tema claro (azul marino/grafito con acento bronce) */
-  --fondo: #faf8f4;
-  --fondo-alterno: #f1ede5;
-  --superficie: #ffffff;
-  --texto: #2a313b;
-  --titulos: #16222f;
-  --tenue: #5c6672;
-  --linea: #ddd6c9;
-  --acento: #9a6b2f;
-  --acento-suave: #f0e4d0;
-  --acento-texto: #ffffff;
+  /* Paleta */
+  --arcilla: #8c5e47;
+  --arcilla-oscura: #6b4634;
+  --arcilla-clara: #d19570;
+  --salvia: #4e7a6a;
+  --salvia-oscura: #3f6457;
+  --crema: #f7f3ee;
+  --blanco: #ffffff;
+  --tinta: #3a332e;
+  --tinta-tenue: #7d736b;
+  --terracota: #c07a52;
+  --linea: #ebe6df;
 
   /* Tipografía */
-  --fuente-titulos: "Fraunces", Georgia, "Times New Roman", serif;
-  --fuente-cuerpo: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fuente: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
 
-  /* Escala tipográfica fluida */
-  --paso--1: clamp(0.8125rem, 0.79rem + 0.12vw, 0.875rem);
-  --paso-0: clamp(1rem, 0.95rem + 0.25vw, 1.125rem);
-  --paso-1: clamp(1.25rem, 1.15rem + 0.5vw, 1.5rem);
-  --paso-2: clamp(1.5625rem, 1.38rem + 0.9vw, 2rem);
-  --paso-3: clamp(1.953rem, 1.65rem + 1.5vw, 2.75rem);
-  --paso-4: clamp(2.441rem, 1.95rem + 2.4vw, 3.75rem);
+  /* Medidas */
+  --borde-lateral: 40px;
+  --contenedor-ancho: 1120px;
+  --encabezado-alto: 4.25rem;
 
-  /* Espaciado */
-  --espacio-1: 0.5rem;
-  --espacio-2: 1rem;
-  --espacio-3: 1.5rem;
-  --espacio-4: 2.5rem;
-  --espacio-5: 4rem;
-  --espacio-6: 6rem;
-
-  /* Radios */
-  --radio-1: 0.375rem;
-  --radio-2: 0.75rem;
-  --radio-3: 1.25rem;
-
-  /* Sombras */
-  --sombra-1: 0 1px 2px rgba(22, 34, 47, 0.06), 0 2px 8px rgba(22, 34, 47, 0.05);
-  --sombra-2: 0 4px 12px rgba(22, 34, 47, 0.08), 0 12px 32px rgba(22, 34, 47, 0.08);
-
-  /* Retícula */
-  --contenedor-ancho: 72rem;
-  --gutter: clamp(1.25rem, 4vw, 3rem);
+  /* Radios y sombras */
+  --radio-boton: 2px;
+  --radio-tarjeta: 3px;
+  --sombra-suave: 0 2px 20px rgba(0, 0, 0, 0.05);
+  --sombra-alta: 0 8px 28px rgba(0, 0, 0, 0.1);
 
   /* Movimiento */
-  --transicion: 220ms cubic-bezier(0.22, 0.61, 0.36, 1);
-
-  /* Encabezado */
-  --encabezado-alto: 4.5rem;
+  --transicion-tarjeta: 250ms cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
-[data-tema="oscuro"] {
-  /* Paleta — tema oscuro */
-  --fondo: #10161e;
-  --fondo-alterno: #151d27;
-  --superficie: #1a2330;
-  --texto: #d5dbe3;
-  --titulos: #eef2f7;
-  --tenue: #98a3b1;
-  --linea: #2a3542;
-  --acento: #c9995c;
-  --acento-suave: #2c2418;
-  --acento-texto: #10161e;
-
-  /* Sombras */
-  --sombra-1: 0 1px 2px rgba(0, 0, 0, 0.4), 0 2px 8px rgba(0, 0, 0, 0.3);
-  --sombra-2: 0 4px 12px rgba(0, 0, 0, 0.45), 0 12px 32px rgba(0, 0, 0, 0.4);
+@media (max-width: 480px) {
+  :root {
+    --borde-lateral: 16px;
+  }
 }

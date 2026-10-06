@@ -1,46 +1,18 @@
-/* ---------------------------------------------------------------------------
- * Contacto e impresión.
- * Reensambla el correo ofuscado (data-u + "@" + data-d) en un mailto: al
- * hacer click, y revela el botón "Imprimir" asignándole window.print().
- * Sin JS el correo visible sigue legible (entidades HTML) y el botón de
- * imprimir no aparece.
- * ------------------------------------------------------------------------ */
+/**
+ * Reensambla el correo ofuscado en los atributos data- y recién entonces pone
+ * el href mailto: y el texto visible del botón.
+ */
 (function () {
   'use strict';
 
-  function activarCorreo(elemento) {
-    var usuario = elemento.getAttribute('data-u');
-    var dominio = elemento.getAttribute('data-d');
-    if (!usuario || !dominio) {
-      return;
-    }
-    elemento.addEventListener('click', function () {
-      window.location.href = 'mailto:' + usuario + '@' + dominio;
-    });
-  }
+  var boton = document.getElementById('boton-correo');
+  if (!boton) return;
 
-  function activarImpresion() {
-    var boton = document.getElementById('boton-imprimir');
-    if (!boton) {
-      return;
-    }
-    boton.removeAttribute('hidden');
-    boton.addEventListener('click', function () {
-      window.print();
-    });
-  }
+  var usuario = boton.getAttribute('data-u');
+  var dominio = boton.getAttribute('data-d');
+  if (!usuario || !dominio) return;
 
-  function iniciar() {
-    var elementosCorreo = document.querySelectorAll('[data-u][data-d]');
-    for (var i = 0; i < elementosCorreo.length; i += 1) {
-      activarCorreo(elementosCorreo[i]);
-    }
-    activarImpresion();
-  }
-
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', iniciar);
-  } else {
-    iniciar();
-  }
+  var correo = usuario + '@' + dominio;
+  boton.textContent = correo;
+  boton.setAttribute('href', 'mailto:' + correo);
 })();

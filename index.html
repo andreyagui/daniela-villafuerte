@@ -7,46 +7,36 @@
   <meta name="description" content="Daniela Villafuerte Mena: Senior Agile Scrum Master · Agile Delivery Lead · Product Owner. Banca y Seguros, Heredia, Costa Rica.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap">
-  <script>
-    /* Fija data-tema antes del primer pintado para evitar el destello */
-    (function () {
-      try {
-        var tema = window.localStorage.getItem('tema');
-        if (!tema) {
-          tema = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'oscuro' : 'claro';
-        }
-        document.documentElement.setAttribute('data-tema', tema);
-      } catch (error) {
-        /* Sin almacenamiento ni matchMedia: queda el tema claro por defecto. */
-      }
-    })();
-  </script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap">
   <link rel="stylesheet" href="css/variables.css">
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/encabezado.css">
   <link rel="stylesheet" href="css/hero.css">
-  <link rel="stylesheet" href="css/secciones.css">
+  <link rel="stylesheet" href="css/presentacion.css">
+  <link rel="stylesheet" href="css/competencias.css">
+  <link rel="stylesheet" href="css/credenciales.css">
+  <link rel="stylesheet" href="css/cifras.css">
   <link rel="stylesheet" href="css/experiencia.css">
+  <link rel="stylesheet" href="css/logros.css">
   <link rel="stylesheet" href="css/contacto.css">
-  <link rel="stylesheet" href="css/temas.css">
-  <link rel="stylesheet" href="css/print.css">
-  <script src="js/tema.js" defer></script>
+  <link rel="stylesheet" href="css/impresion.css">
+  <script src="js/anillos.js" defer></script>
   <script src="js/contacto.js" defer></script>
+  <script src="js/impresion.js" defer></script>
 </head>
 <body>
-  <header class="encabezado-sitio">
+  <header class="encabezado">
     <div class="encabezado-interior">
       <a class="marca" href="#inicio">Daniela Villafuerte Mena</a>
       <nav class="nav-sitio" aria-label="Navegación principal">
         <ul class="nav-lista">
-          <li><a class="nav-enlace" href="#resumen">Resumen</a></li>
+          <li><a class="nav-enlace" href="#presentacion">Presentación</a></li>
           <li><a class="nav-enlace" href="#competencias">Competencias</a></li>
+          <li><a class="nav-enlace" href="#credenciales">Credenciales</a></li>
+          <li><a class="nav-enlace" href="#cifras">Cifras</a></li>
           <li><a class="nav-enlace" href="#experiencia">Experiencia</a></li>
           <li><a class="nav-enlace" href="#logros">Logros</a></li>
-          <li><a class="nav-enlace" href="#formacion">Formación</a></li>
           <li><a class="nav-enlace" href="#contacto">Contacto</a></li>
-          <li><button type="button" class="boton-tema" id="boton-tema" hidden aria-pressed="false" aria-label="Cambiar a tema oscuro">Tema</button></li>
         </ul>
       </nav>
     </div>
@@ -54,278 +44,278 @@
 
   <main>
     <section id="inicio" class="hero">
-      <div class="hero-interior">
-        <p class="hero-titular">Senior Agile Scrum Master · Agile Delivery Lead · Product Owner</p>
-        <h1 class="hero-nombre">Daniela Villafuerte Mena</h1>
-        <p class="hero-propuesta">Aseguro el delivery tecnológico en banca y seguros (Banco Popular y Popular Seguros).</p>
-        <p class="hero-ubicacion">Banca y Seguros · Heredia, Costa Rica</p>
-
-        <ul class="metricas" aria-label="Métricas destacadas">
-          <li class="metrica">
-            <span class="metrica-valor">13 años</span>
-            <span class="metrica-etiqueta">de experiencia total</span>
-          </li>
-          <li class="metrica">
-            <span class="metrica-valor">6 equipos</span>
-            <span class="metrica-etiqueta">hasta 28 personas a cargo</span>
-          </li>
-          <li class="metrica">
-            <span class="metrica-valor">87+</span>
-            <span class="metrica-etiqueta">pases exitosos a producción</span>
-          </li>
-          <li class="metrica">
-            <span class="metrica-valor">20+</span>
-            <span class="metrica-etiqueta">requerimientos en paralelo</span>
-          </li>
-        </ul>
-
-        <div class="hero-ctas">
-          <a class="boton boton-primario" href="#experiencia">Ver trayectoria</a>
-          <button type="button" class="boton boton-secundario" data-u="dvillafuerte93xto" data-d="gmail.com">Escribirme</button>
-          <a class="boton boton-secundario" href="https://linkedin.com/in/daniela-villafuerte-mena-a70a90159">LinkedIn</a>
+      <div class="hero-banda">
+        <div class="hero-texto">
+          <h1 class="hero-nombre">
+            <span class="hero-nombre-uno">Daniela</span>
+            <span class="hero-nombre-dos">Villafuerte Mena</span>
+          </h1>
+          <p class="hero-rol">Senior Agile Scrum Master</p>
+          <button type="button" class="boton-borde boton-imprimir">Descargar mi CV</button>
+        </div>
+        <div class="hero-foto">
+          <img src="assets/daniela.jpg" alt="Retrato de Daniela Villafuerte Mena: sonríe, usa gafas y blazer claro sobre un fondo cálido">
         </div>
       </div>
     </section>
-
-    <section id="resumen" class="seccion">
-      <div class="contenedor">
-        <header class="seccion-encabezado">
-          <h2>Resumen ejecutivo</h2>
-        </header>
-        <p class="resumen-texto">Profesional con 13 años de experiencia y 9 en tecnología, con base administrativa-financiera y trayectoria en Project Management, Product Ownership y liderazgo Agile. Aseguro el delivery tecnológico en banca y seguros (Banco Popular y Popular Seguros), con progresión continua en Babel Group desde 2023: coordino 6 equipos (hasta 28 personas, internos y externos) de desarrollo, infraestructura, negocio y proveedores sobre el core bancario T24 y sistemas de crédito y colocación, gestionando riesgos, dependencias, incidentes, releases y pases a producción en un entorno regulado. Combino visión de negocio, disciplina de entrega y prácticas Scrum, Kanban y SAFe.</p>
+    <section id="presentacion" class="seccion seccion-crema">
+      <h2 class="visually-hidden">Presentación</h2>
+      <div class="contenedor presentacion-grid">
+        <p class="saludo">Hola, soy Daniela, Agile Delivery Lead en banca y seguros, en Costa Rica.</p>
+        <p class="resumen">Profesional con 13 años de experiencia y 9 en tecnología, con base administrativa-financiera y trayectoria en Project Management, Product Ownership y liderazgo Agile.</p>
+        <p class="resumen">Aseguro el delivery tecnológico en banca y seguros (Banco Popular y Popular Seguros), con progresión continua en Babel Group desde 2023: coordino 6 equipos (hasta 28 personas, internos y externos) de desarrollo, infraestructura, negocio y proveedores sobre el core bancario T24 y sistemas de crédito y colocación, gestionando riesgos, dependencias, incidentes, releases y pases a producción en un entorno regulado. Combino visión de negocio, disciplina de entrega y prácticas Scrum, Kanban y SAFe.</p>
       </div>
     </section>
 
-    <section id="competencias" class="seccion">
+    <section id="competencias" class="seccion seccion-crema">
+      <h2 class="visually-hidden">Competencias</h2>
+      <div class="contenedor competencias-grid">
+        <div class="competencia">
+          <svg class="competencia-icono" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <rect x="7" y="5" width="30" height="34" rx="2"/>
+            <path d="M17 5v34M27 5v34"/>
+          </svg>
+          <h3 class="competencia-area">Delivery y gobierno</h3>
+          <p class="competencia-items">Agile Delivery, gestión de riesgos, dependencias e impedimentos, gestión de incidentes, releases y pases a producción, coordinación de ambientes, gestión de cambios</p>
+        </div>
+        <div class="competencia">
+          <svg class="competencia-icono" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <path d="M33 17a12 12 0 1 0 1 8"/>
+            <path d="M33 10v7h-7"/>
+          </svg>
+          <h3 class="competencia-area">Agile y producto</h3>
+          <p class="competencia-items">Scrum, Kanban, SAFe, PI Planning, Sprint Planning, Refinement, Product Ownership, gestión y priorización de backlog por valor y dependencias</p>
+        </div>
+        <div class="competencia">
+          <svg class="competencia-icono" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <circle cx="22" cy="14" r="5"/>
+            <path d="M12 36c0-6 4.5-10 10-10s10 4 10 10"/>
+            <circle cx="9" cy="18" r="3.5"/>
+            <path d="M3 34c0-4.5 2.7-7.5 6-8.4"/>
+          </svg>
+          <h3 class="competencia-area">Liderazgo y stakeholders</h3>
+          <p class="competencia-items">coordinación de equipos multidisciplinarios, gestión de stakeholders (negocio, líderes técnicos, proveedores), escalamiento, gestión de proveedores</p>
+        </div>
+        <div class="competencia">
+          <svg class="competencia-icono" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <path d="M6 18 22 7l16 11"/>
+            <path d="M10 18v14M17 18v14M27 18v14M34 18v14"/>
+            <path d="M6 36h32"/>
+          </svg>
+          <h3 class="competencia-area">Sector financiero</h3>
+          <p class="competencia-items">core bancario T24, requerimientos regulatorios y normativos, banca y seguros</p>
+        </div>
+        <div class="competencia">
+          <svg class="competencia-icono" viewBox="0 0 44 44" aria-hidden="true" focusable="false">
+            <circle cx="22" cy="22" r="8"/>
+            <path d="M22 5v6M22 33v6M5 22h6M33 22h6M10 10l4.2 4.2M29.8 29.8 34 34M34 10l-4.2 4.2M14.2 29.8 10 34"/>
+          </svg>
+          <h3 class="competencia-area">Herramientas</h3>
+          <p class="competencia-items">Azure DevOps, JIRA, Service Manager, Monday, Planner; IA aplicada al rol (comunicación, análisis y refinamiento) con uso responsable</p>
+        </div>
+      </div>
+    </section>
+    <section id="credenciales" class="banda banda-salvia">
+      <div class="contenedor credenciales-grid">
+        <div class="credencial">
+          <h2 class="credencial-titulo">Educación</h2>
+          <svg class="credencial-icono" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+            <path d="M14 7C10.5 4.8 6 4.5 3 5.5v16c3-1 7.5-.7 11 1.5 3.5-2.2 8-2.5 11-1.5v-16c-3-1-7.5-.7-11 1.5z"/>
+            <path d="M14 7v16"/>
+          </svg>
+          <ul class="credencial-lista">
+            <li>Universidad de Ciencias Empresariales — Bachillerato en Contaduría</li>
+            <li>Universidad de Ciencias Empresariales — Bachillerato en Administración de Negocios (90 % completado)</li>
+          </ul>
+        </div>
+        <div class="credencial">
+          <h2 class="credencial-titulo">Certificaciones</h2>
+          <svg class="credencial-icono" viewBox="0 0 28 28" aria-hidden="true" focusable="false">
+            <circle cx="14" cy="11" r="6.5"/>
+            <path d="M10 17l-2 8 6-3 6 3-2-8"/>
+          </svg>
+          <ul class="credencial-lista">
+            <li>Scrum Master, Scrum Product Owner, Scrum Fundamentals y Scrum Developer (CertMind)</li>
+            <li>Kanban y SAFe</li>
+            <li>Liderazgo Ágil desde cero (Udemy, sept 2026, 10 horas)</li>
+            <li>Taller «Habilidades del líder» (mar 2026)</li>
+          </ul>
+        </div>
+      </div>
+      <p class="idiomas">Español nativo · Inglés B1</p>
+    </section>
+
+    <section id="cifras" class="seccion seccion-crema">
       <div class="contenedor">
-        <header class="seccion-encabezado">
-          <h2>Competencias</h2>
-        </header>
-        <ul class="competencias-grid">
-          <li class="competencia">
-            <h3>Delivery y gobierno</h3>
-            <p>Agile Delivery, gestión de riesgos, dependencias e impedimentos, gestión de incidentes, releases y pases a producción, coordinación de ambientes, gestión de cambios</p>
+        <h2 class="titulo-seccion">Trayectoria en números</h2>
+        <ul class="anillos">
+          <li class="anillo">
+            <div class="anillo-cara">
+              <svg viewBox="0 0 130 130" aria-hidden="true" focusable="false">
+                <circle class="anillo-fondo" cx="65" cy="65" r="62" stroke-width="6"/>
+                <circle class="anillo-arco" cx="65" cy="65" r="62" stroke-width="6" stroke-linecap="round" transform="rotate(-90 65 65)" stroke-dasharray="331.1 389.6" stroke-dashoffset="0"/>
+              </svg>
+              <span class="anillo-valor">13 años</span>
+            </div>
+            <span class="anillo-etiqueta">de experiencia total</span>
           </li>
-          <li class="competencia">
-            <h3>Agile y producto</h3>
-            <p>Scrum, Kanban, SAFe, PI Planning, Sprint Planning, Refinement, Product Ownership, gestión y priorización de backlog por valor y dependencias</p>
+          <li class="anillo">
+            <div class="anillo-cara">
+              <svg viewBox="0 0 130 130" aria-hidden="true" focusable="false">
+                <circle class="anillo-fondo" cx="65" cy="65" r="62" stroke-width="6"/>
+                <circle class="anillo-arco" cx="65" cy="65" r="62" stroke-width="6" stroke-linecap="round" transform="rotate(-90 65 65)" stroke-dasharray="272.7 389.6" stroke-dashoffset="0"/>
+              </svg>
+              <span class="anillo-valor">6 equipos</span>
+            </div>
+            <span class="anillo-etiqueta">hasta 28 personas a cargo</span>
           </li>
-          <li class="competencia">
-            <h3>Liderazgo y stakeholders</h3>
-            <p>coordinación de equipos multidisciplinarios, gestión de stakeholders (negocio, líderes técnicos, proveedores), escalamiento, gestión de proveedores</p>
+          <li class="anillo">
+            <div class="anillo-cara">
+              <svg viewBox="0 0 130 130" aria-hidden="true" focusable="false">
+                <circle class="anillo-fondo" cx="65" cy="65" r="62" stroke-width="6"/>
+                <circle class="anillo-arco" cx="65" cy="65" r="62" stroke-width="6" stroke-linecap="round" transform="rotate(-90 65 65)" stroke-dasharray="350.6 389.6" stroke-dashoffset="0"/>
+              </svg>
+              <span class="anillo-valor">87+</span>
+            </div>
+            <span class="anillo-etiqueta">pases exitosos a producción</span>
           </li>
-          <li class="competencia">
-            <h3>Sector financiero</h3>
-            <p>core bancario T24, requerimientos regulatorios y normativos, banca y seguros</p>
-          </li>
-          <li class="competencia">
-            <h3>Herramientas</h3>
-            <p>Azure DevOps, JIRA, Service Manager, Monday, Planner; IA aplicada al rol (comunicación, análisis y refinamiento) con uso responsable</p>
+          <li class="anillo">
+            <div class="anillo-cara">
+              <svg viewBox="0 0 130 130" aria-hidden="true" focusable="false">
+                <circle class="anillo-fondo" cx="65" cy="65" r="62" stroke-width="6"/>
+                <circle class="anillo-arco" cx="65" cy="65" r="62" stroke-width="6" stroke-linecap="round" transform="rotate(-90 65 65)" stroke-dasharray="292.2 389.6" stroke-dashoffset="0"/>
+              </svg>
+              <span class="anillo-valor">20+</span>
+            </div>
+            <span class="anillo-etiqueta">requerimientos en paralelo</span>
           </li>
         </ul>
       </div>
     </section>
-
-    <section id="experiencia" class="seccion">
+    <section id="experiencia" class="seccion seccion-blanca">
       <div class="contenedor">
-        <header class="seccion-encabezado">
-          <h2>Experiencia</h2>
-        </header>
+        <h2 class="titulo-seccion">Experiencia</h2>
 
-        <ol class="linea-tiempo">
-          <li class="empresa">
-            <header class="empresa-nodo">
-              <h3>Babel Group</h3>
-              <p class="periodo-empresa">2023 – actualidad</p>
-            </header>
-            <ol class="puestos">
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Senior Agile Scrum Master</h4>
-                  <p class="cliente">Banco Popular</p>
-                  <p class="periodo">feb 2025 – actualidad</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Aseguro el delivery de 6 equipos (crédito y colocación) de hasta 28 personas, internos y externos, coordinando incidentes, desarrollos y proyectos con líderes técnicos, negocio y proveedores externos.</li>
-                  <li>Scrum Master de ABANKS (2025–2026), iniciativa de alta prioridad y complejidad del banco, coordinando múltiples equipos.</li>
-                  <li>Doy seguimiento a los requerimientos en paralelo con trazabilidad end-to-end en Azure DevOps (sprints, capacidad y avance de actividades).</li>
-                  <li>Gestiono y escalo impedimentos, dependencias y riesgos críticos para proteger el cumplimiento de los equipos.</li>
-                  <li>Oriento releases y pases a producción integrando equipos y ambientes, cuidando calidad y cumplimiento.</li>
-                  <li>Facilito ceremonias Scrum y doy seguimiento a métricas de flujo para sostener la mejora continua.</li>
-                </ul>
-              </li>
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Product Owner</h4>
-                  <p class="cliente">Popular Seguros</p>
-                  <p class="periodo">oct 2024 – feb 2025</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Creé y prioricé el backlog (épicas e historias de usuario) con criterios INVEST, según valor y dependencias.</li>
-                  <li>Lideré refinamientos con negocio para asegurar claridad y criterios de aceptación (DoR/DoD).</li>
-                  <li>Brindé apoyo dual como Scrum Master a los equipos de desarrollo e infraestructura del proyecto KADSI.</li>
-                </ul>
-              </li>
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Scrum Master, célula T24</h4>
-                  <p class="cliente">Banco Popular</p>
-                  <p class="periodo">2023 – 2024</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Coordiné los pases a producción de la célula, articulando múltiples áreas y jefaturas.</li>
-                  <li>Controlé incidentes, desarrollos y proyectos de la célula T24 (19 técnicos internos y externos); goberné el backlog (Top 10, Fast Tracks, Packs y preaprobados) con enfoque en valor y riesgo.</li>
-                  <li>Coordiné equipos y proveedores, con gestión de impedimentos y trazabilidad en Azure DevOps.</li>
-                  <li>Brindé soporte a incidentes en producción.</li>
-                  <li>Participé en requerimientos normativos de alta complejidad del core bancario; en CICAC (2022) actué como Scrum Master coordinando múltiples equipos.</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
+        <article class="empresa">
+          <header class="empresa-cabecera">
+            <h3 class="empresa-nombre">Babel Group</h3>
+            <p class="empresa-periodo">2023 – actualidad</p>
+          </header>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Senior Agile Scrum Master<span class="puesto-cliente"> · Banco Popular</span></h4>
+            <p class="puesto-periodo">feb 2025 – actualidad</p>
+            <ul class="puesto-logros">
+              <li>Aseguro el delivery de 6 equipos (crédito y colocación) de hasta 28 personas, internos y externos, coordinando incidentes, desarrollos y proyectos con líderes técnicos, negocio y proveedores externos.</li>
+              <li>Scrum Master de ABANKS (2025–2026), iniciativa de alta prioridad y complejidad del banco, coordinando múltiples equipos.</li>
+              <li>Doy seguimiento a los requerimientos en paralelo con trazabilidad end-to-end en Azure DevOps (sprints, capacidad y avance de actividades).</li>
+              <li>Gestiono y escalo impedimentos, dependencias y riesgos críticos para proteger el cumplimiento de los equipos.</li>
+              <li>Oriento releases y pases a producción integrando equipos y ambientes, cuidando calidad y cumplimiento.</li>
+              <li>Facilito ceremonias Scrum y doy seguimiento a métricas de flujo para sostener la mejora continua.</li>
+            </ul>
+          </div>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Product Owner<span class="puesto-cliente"> · Popular Seguros</span></h4>
+            <p class="puesto-periodo">oct 2024 – feb 2025</p>
+            <ul class="puesto-logros">
+              <li>Creé y prioricé el backlog (épicas e historias de usuario) con criterios INVEST, según valor y dependencias.</li>
+              <li>Lideré refinamientos con negocio para asegurar claridad y criterios de aceptación (DoR/DoD).</li>
+              <li>Brindé apoyo dual como Scrum Master a los equipos de desarrollo e infraestructura del proyecto KADSI.</li>
+            </ul>
+          </div>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Scrum Master, célula T24<span class="puesto-cliente"> · Banco Popular</span></h4>
+            <p class="puesto-periodo">2023 – 2024</p>
+            <ul class="puesto-logros">
+              <li>Coordiné los pases a producción de la célula, articulando múltiples áreas y jefaturas.</li>
+              <li>Controlé incidentes, desarrollos y proyectos de la célula T24 (19 técnicos internos y externos); goberné el backlog (Top 10, Fast Tracks, Packs y preaprobados) con enfoque en valor y riesgo.</li>
+              <li>Coordiné equipos y proveedores, con gestión de impedimentos y trazabilidad en Azure DevOps.</li>
+              <li>Brindé soporte a incidentes en producción.</li>
+              <li>Participé en requerimientos normativos de alta complejidad del core bancario; en CICAC (2022) actué como Scrum Master coordinando múltiples equipos.</li>
+            </ul>
+          </div>
+        </article>
 
+        <article class="empresa">
+          <header class="empresa-cabecera">
+            <h3 class="empresa-nombre">Novacomp</h3>
+            <p class="empresa-periodo">sep 2021 – 2023</p>
+          </header>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Scrum Master<span class="puesto-cliente"> · Banco Popular</span></h4>
+            <p class="puesto-periodo">sep 2021 – 2023</p>
+            <ul class="puesto-logros">
+              <li>Lideré equipos multidisciplinarios en iniciativas core de Banco Popular; facilité PI Planning y sesiones de entendimiento con negocio.</li>
+              <li>Gestioné cambios con validación en Service Manager y reporté métricas de la célula.</li>
+              <li>Coordiné recursos externos (nacionales e internacionales) y líneas base de versionamiento.</li>
+            </ul>
+          </div>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Scrum Master<span class="puesto-cliente"> · Junta de Protección Social</span></h4>
+            <p class="puesto-periodo">sep 2021 – 2023</p>
+            <ul class="puesto-logros">
+              <li>Coordiné proyectos en distintas intendencias (sorteos, contabilidad, ERP), gestionando incidencias, features, backlog y ceremonias.</li>
+            </ul>
+          </div>
+        </article>
+        <article class="empresa">
+          <header class="empresa-cabecera">
+            <h3 class="empresa-nombre">ASEGESSA</h3>
+            <p class="empresa-periodo">feb 2019 – sep 2021</p>
+          </header>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Administrador</h4>
+            <p class="puesto-periodo">feb 2019 – sep 2021</p>
+            <ul class="puesto-logros">
+              <li>Administré integralmente la asociación y lideré un equipo de 8 personas aplicando prácticas ágiles a la operación y estrategia.</li>
+              <li>Realicé análisis financiero-administrativo y proyectos para optimizar rentabilidad y mitigar riesgos.</li>
+            </ul>
+          </div>
+        </article>
 
-          <li class="empresa">
-            <header class="empresa-nodo">
-              <h3>Novacomp</h3>
-              <p class="periodo-empresa">sep 2021 – 2023</p>
-            </header>
-            <ol class="puestos">
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Scrum Master</h4>
-                  <p class="cliente">Banco Popular</p>
-                  <p class="periodo">sep 2021 – 2023</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Lideré equipos multidisciplinarios en iniciativas core de Banco Popular; facilité PI Planning y sesiones de entendimiento con negocio.</li>
-                  <li>Gestioné cambios con validación en Service Manager y reporté métricas de la célula.</li>
-                  <li>Coordiné recursos externos (nacionales e internacionales) y líneas base de versionamiento.</li>
-                </ul>
-              </li>
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Scrum Master</h4>
-                  <p class="cliente">Junta de Protección Social</p>
-                  <p class="periodo">sep 2021 – 2023</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Coordiné proyectos en distintas intendencias (sorteos, contabilidad, ERP), gestionando incidencias, features, backlog y ceremonias.</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-
-          <li class="empresa">
-            <header class="empresa-nodo">
-              <h3>ASEGESSA</h3>
-              <p class="periodo-empresa">feb 2019 – sep 2021</p>
-            </header>
-            <ol class="puestos">
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Administrador</h4>
-                  <p class="periodo">feb 2019 – sep 2021</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Administré integralmente la asociación y lideré un equipo de 8 personas aplicando prácticas ágiles a la operación y estrategia.</li>
-                  <li>Realicé análisis financiero-administrativo y proyectos para optimizar rentabilidad y mitigar riesgos.</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-
-          <li class="empresa">
-            <header class="empresa-nodo">
-              <h3>Exdesa S.A.</h3>
-              <p class="periodo-empresa">ene 2017 – ene 2019</p>
-            </header>
-            <ol class="puestos">
-              <li class="puesto">
-                <header class="puesto-cabecera">
-                  <h4>Development Project Manager</h4>
-                  <p class="periodo">ene 2017 – ene 2019</p>
-                </header>
-                <ul class="puesto-logros">
-                  <li>Coordiné proyectos y entregables de desarrollo, desde el levantamiento de requerimientos hasta la implementación.</li>
-                  <li>Gestioné el proyecto de nómina, análisis de datos y asientos contables; orienté a consultores y capacité a más de 36 puntos de venta.</li>
-                </ul>
-              </li>
-            </ol>
-          </li>
-        </ol>
+        <article class="empresa">
+          <header class="empresa-cabecera">
+            <h3 class="empresa-nombre">Exdesa S.A.</h3>
+            <p class="empresa-periodo">ene 2017 – ene 2019</p>
+          </header>
+          <div class="puesto">
+            <h4 class="puesto-cargo">Development Project Manager</h4>
+            <p class="puesto-periodo">ene 2017 – ene 2019</p>
+            <ul class="puesto-logros">
+              <li>Coordiné proyectos y entregables de desarrollo, desde el levantamiento de requerimientos hasta la implementación.</li>
+              <li>Gestioné el proyecto de nómina, análisis de datos y asientos contables; orienté a consultores y capacité a más de 36 puntos de venta.</li>
+            </ul>
+          </div>
+        </article>
 
         <p class="nota-experiencia">Experiencia previa en áreas administrativas y contables, antes de 2017.</p>
       </div>
     </section>
-
-
-    <section id="logros" class="seccion">
+    <section id="logros" class="seccion seccion-crema">
       <div class="contenedor">
-        <header class="seccion-encabezado">
-          <h2>Logros destacados</h2>
-        </header>
-        <ol class="logros-lista">
-          <li>Coordinación de 87+ pases exitosos a producción (2023–2024) entre múltiples áreas y jefaturas.</li>
-          <li>Liderazgo simultáneo de 6 equipos y seguimiento de 20+ requerimientos en paralelo con trazabilidad end-to-end (2025).</li>
-          <li>Entrega en tiempo y forma de requerimientos normativos y estratégicos del banco: CICAC, Emisión MasterCard, IVA Transfronterizo, FT ACFM – Fuera de Monex, SINPE Pagos Inmediatos (PIN-TFT) y ABANKS.</li>
-          <li>Definí una guía de 9 buenas prácticas Scrum (refinamiento, dependencias, cambios de prioridad, calidad previa a pases, incidente vs. cambio) y la apliqué en 3 equipos (2026).</li>
-          <li>Transición desde finanzas y administración hacia tecnología, Product Ownership y liderazgo Agile, aportando perspectiva de negocio al delivery.</li>
-        </ol>
+        <h2 class="titulo-seccion">Logros destacados</h2>
+        <ul class="logros-grid">
+          <li class="logro"><p>Coordinación de 87+ pases exitosos a producción (2023–2024) entre múltiples áreas y jefaturas.</p></li>
+          <li class="logro"><p>Liderazgo simultáneo de 6 equipos y seguimiento de 20+ requerimientos en paralelo con trazabilidad end-to-end (2025).</p></li>
+          <li class="logro"><p>Entrega en tiempo y forma de requerimientos normativos y estratégicos del banco: CICAC, Emisión MasterCard, IVA Transfronterizo, FT ACFM – Fuera de Monex, SINPE Pagos Inmediatos (PIN-TFT) y ABANKS.</p></li>
+          <li class="logro"><p>Definí una guía de 9 buenas prácticas Scrum (refinamiento, dependencias, cambios de prioridad, calidad previa a pases, incidente vs. cambio) y la apliqué en 3 equipos (2026).</p></li>
+          <li class="logro"><p>Transición desde finanzas y administración hacia tecnología, Product Ownership y liderazgo Agile, aportando perspectiva de negocio al delivery.</p></li>
+        </ul>
       </div>
     </section>
 
-    <section id="formacion" class="seccion">
-      <div class="contenedor">
-        <header class="seccion-encabezado">
-          <h2>Formación</h2>
-        </header>
-        <div class="formacion-grid">
-          <div class="formacion-bloque">
-            <h3>Educación</h3>
-            <ul>
-              <li>Universidad de Ciencias Empresariales — Bachillerato en Contaduría</li>
-              <li>Universidad de Ciencias Empresariales — Bachillerato en Administración de Negocios (90 % completado)</li>
-            </ul>
-          </div>
-          <div class="formacion-bloque">
-            <h3>Certificaciones</h3>
-            <ul>
-              <li>Scrum Master, Scrum Product Owner, Scrum Fundamentals y Scrum Developer (CertMind)</li>
-              <li>Kanban y SAFe</li>
-              <li>Liderazgo Ágil desde cero (Udemy, sept 2026, 10 horas)</li>
-              <li>Taller «Habilidades del líder» (mar 2026)</li>
-            </ul>
-          </div>
-          <div class="formacion-bloque">
-            <h3>Idiomas</h3>
-            <p class="formacion-idiomas">Español nativo · Inglés B1</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="contacto" class="seccion">
-      <div class="contenedor contacto-bloque">
-        <header class="seccion-encabezado">
-          <h2>Contacto</h2>
-        </header>
-        <p class="contacto-texto">Heredia, Costa Rica</p>
+    <section id="contacto" class="banda banda-arcilla">
+      <div class="contenedor contacto">
+        <h2 class="contacto-titulo">Hablemos</h2>
+        <p class="contacto-ubicacion">Heredia, Costa Rica</p>
         <div class="contacto-acciones">
-          <button type="button" class="boton boton-primario" data-u="dvillafuerte93xto" data-d="gmail.com">Escribirme</button>
-          <a class="boton boton-secundario" href="https://linkedin.com/in/daniela-villafuerte-mena-a70a90159">linkedin.com/in/daniela-villafuerte-mena-a70a90159</a>
-          <button type="button" class="boton boton-secundario" id="boton-imprimir" hidden>Imprimir</button>
+          <a class="boton-borde" id="boton-correo" data-u="dvillafuerte93xto" data-d="gmail.com" aria-label="Escribirme por correo"></a>
+          <a class="boton-borde" href="https://linkedin.com/in/daniela-villafuerte-mena-a70a90159">linkedin.com/in/daniela-villafuerte-mena-a70a90159</a>
         </div>
-        <p class="contacto-correo-visible"><span>dvillafuerte93xto&#64;gmail&#46;com</span></p>
       </div>
+      <footer class="pie">
+        <p>Daniela Villafuerte Mena · 2026</p>
+      </footer>
     </section>
   </main>
-
-  <footer class="pie">
-    <div class="pie-interior">
-      <p>Daniela Villafuerte Mena — Senior Agile Scrum Master · Agile Delivery Lead · Product Owner</p>
-      <p>Heredia, Costa Rica</p>
-    </div>
-  </footer>
 </body>
 </html>
-

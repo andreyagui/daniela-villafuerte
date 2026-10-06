@@ -1,0 +1,106 @@
+/* ---------------------------------------------------------------------------
+ * Hoja de impresión: navegación y botones fuera, fondos claros, tarjetas que
+ * no se parten entre páginas.
+ * ------------------------------------------------------------------------ */
+
+@media print {
+  html,
+  body {
+    background-color: var(--blanco);
+    color: var(--tinta);
+    font-size: 10.5pt;
+  }
+
+  .encabezado,
+  .boton-borde {
+    display: none !important;
+  }
+
+  .hero {
+    padding-block: 0 1rem;
+  }
+
+  .hero-banda,
+  .banda,
+  .seccion-crema,
+  .seccion-blanca {
+    margin-inline: 0;
+    padding-block: 1rem;
+    background-color: var(--blanco);
+  }
+
+  .hero-banda {
+    min-height: 0;
+    grid-template-columns: 60% 40%;
+  }
+
+  .hero-texto {
+    padding: 0.5rem 1rem 0.5rem 0;
+  }
+
+  .hero-nombre-uno,
+  .hero-nombre-dos {
+    color: var(--tinta);
+  }
+
+  .hero-nombre-uno {
+    font-size: 20pt;
+  }
+
+  .hero-nombre-dos {
+    font-size: 24pt;
+  }
+
+  .hero-rol,
+  .contacto-ubicacion,
+  .idiomas,
+  .pie {
+    color: var(--tinta-tenue);
+  }
+
+  .hero-foto img {
+    height: 220px;
+    margin-block-start: 0;
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
+  .credencial-titulo,
+  .contacto-titulo {
+    color: var(--tinta);
+  }
+
+  .credencial-icono {
+    color: var(--tinta-tenue);
+  }
+
+  .credencial-lista li {
+    color: var(--tinta);
+  }
+
+  .seccion {
+    padding-block: 1.25rem;
+  }
+
+  .titulo-seccion {
+    font-size: 15pt;
+    margin-block-end: 1rem;
+  }
+
+  .empresa,
+  .logro {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--linea);
+    border-left: 3px solid var(--terracota);
+  }
+
+  .logros-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .anillo-cara {
+    width: 90px;
+    height: 90px;
+  }
+}

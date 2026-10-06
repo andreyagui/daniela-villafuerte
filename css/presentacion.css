@@ -1,0 +1,34 @@
+/* ---------------------------------------------------------------------------
+ * Presentación: saludo a la derecha + resumen partido en dos columnas.
+ * ------------------------------------------------------------------------ */
+
+.presentacion-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+  align-items: start;
+}
+
+.saludo {
+  font-size: clamp(1.15rem, 2vw, 1.5rem);
+  line-height: 1.5;
+  text-align: right;
+  color: var(--terracota);
+}
+
+.resumen {
+  font-size: 14px;
+  line-height: 1.8;
+  color: var(--tinta-tenue);
+}
+
+@media (max-width: 900px) {
+  .presentacion-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .saludo {
+    text-align: left;
+  }
+}

@@ -1,36 +1,44 @@
 # CV de Daniela Villafuerte Mena
 
-## Qué es
+Sitio personal estático con el CV completo de Daniela Villafuerte Mena: hero con
+la foto integrada a una banda de color, presentación, competencias, credenciales,
+cifras en anillos, experiencia en tarjetas por empresa, logros destacados y
+contacto. No hay build ni dependencias: es HTML, CSS y JS puros, con Poppins de
+Google Fonts y hoja de impresión propia.
 
-Sitio personal estático con el CV completo de Daniela Villafuerte Mena: hero con métricas destacadas, resumen ejecutivo, competencias, experiencia en línea de tiempo agrupada por empresa, logros destacados, formación y contacto. No hay build ni dependencias: es HTML, CSS y JS puros.
-
-Incluye dos temas (claro y oscuro) conmutables con persistencia en `localStorage`, correo ofuscado que se reensambla como `mailto:` sólo con JS, y una hoja de impresión propia para exportar el CV en 2–3 páginas.
+El diseño sigue la maqueta de referencia (`docs/referencia-diseno.jpg`) y la
+paleta deriva de la foto de Daniela (`assets/daniela.jpg`). La especificación
+completa está en `docs/briefs/sitio-editorial.md`.
 
 ## Estructura de archivos
 
-```
-index.html            Página única con todo el contenido
-css/variables.css     Tokens del sistema de diseño (paleta de ambos temas, tipografía, espaciado)
-css/base.css          Reset, tipografía fluida, retícula y foco accesible
-css/encabezado.css    Encabezado fijo con navegación translúcida
-css/hero.css          Hero a pantalla completa con métricas y CTAs
-css/secciones.css     Secciones de contenido, competencias, logros y formación
-css/experiencia.css   Línea de tiempo de experiencia agrupada por empresa
-css/contacto.css      Bloque de contacto y pie de página
-css/temas.css         Transición entre temas y ajustes del tema oscuro
-css/print.css         Hoja de impresión (fuerza tema claro, oculta navegación)
-js/tema.js            Conmutador de tema claro/oscuro con persistencia
-js/contacto.js        Reensamblado del correo ofuscado y botón de imprimir
-contenido/cv.json     Fuente de verdad del contenido (verificada por el test)
-```
+- `index.html` — página única con todo el contenido
+- `css/variables.css` — tokens del sistema de diseño (paleta, medidas, sombras)
+- `css/base.css` — reset, tipografía, retícula compartida y botones de borde
+- `css/encabezado.css` — encabezado fijo con navegación translúcida
+- `css/hero.css` — hero: banda arcilla con nombre y foto fundida
+- `css/presentacion.css` — saludo y resumen en tres columnas
+- `css/competencias.css` — fila de 5 competencias con íconos de línea
+- `css/credenciales.css` — banda salvia con educación y certificaciones
+- `css/cifras.css` — 4 anillos con métricas (sin porcentajes)
+- `css/experiencia.css` — tarjetas de empresa con puestos y logros
+- `css/logros.css` — retícula de tarjetas de logros destacados
+- `css/contacto.css` — banda arcilla de contacto y pie
+- `css/impresion.css` — hoja de impresión (fondos claros, sin navegación)
+- `js/anillos.js` — animación de los anillos al entrar en pantalla
+- `js/contacto.js` — reensamblado del correo ofuscado (mailto en runtime)
+- `js/impresion.js` — botón "Descargar mi CV" → `window.print()`
+- `contenido/cv.json` — fuente de verdad del contenido (verificada por el test)
 
 ## Cómo verlo en local
 
-Doble clic en `index.html`. Se abre directo en el navegador, sin servidor ni instalación previa.
+Doble clic en `index.html`. Se abre directo en el navegador, sin servidor ni
+instalación previa.
 
-## Cómo verificar el sitio
+## Cómo verificarlo
 
-El test compara el HTML contra `contenido/cv.json` frase por frase (y verifica que el teléfono no aparezca); el lint verifica la base del HTML:
+El test compara el HTML contra `contenido/cv.json` frase por frase (y verifica
+que el teléfono no aparezca); el lint revisa la base del HTML:
 
 ```
 npm run test

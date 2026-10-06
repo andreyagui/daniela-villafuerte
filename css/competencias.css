@@ -1,0 +1,59 @@
+/* ---------------------------------------------------------------------------
+ * Competencias: fila de 5 columnas con ícono de línea, área y detalle.
+ * ------------------------------------------------------------------------ */
+
+#competencias {
+  padding-block-start: 0;
+}
+
+.competencias-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 2.5rem;
+}
+
+.competencia {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  text-align: center;
+}
+
+.competencia-icono {
+  width: 44px;
+  height: 44px;
+  color: var(--tinta-tenue);
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.competencia-area {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--tinta);
+}
+
+.competencia-items {
+  font-size: 12.5px;
+  line-height: 1.7;
+  color: var(--tinta-tenue);
+}
+
+@media (max-width: 900px) {
+  .competencias-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem 2rem;
+  }
+}
+
+@media (max-width: 560px) {
+  .competencias-grid {
+    grid-template-columns: 1fr;
+  }
+}
