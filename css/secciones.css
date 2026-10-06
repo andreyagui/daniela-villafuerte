@@ -1,0 +1,107 @@
+/* ---------------------------------------------------------------------------
+ * Secciones de contenido: respiro amplio, encabezados consistentes y
+ * grillas para competencias y logros destacados.
+ * ------------------------------------------------------------------------ */
+
+.seccion {
+  padding-block: var(--espacio-6);
+}
+
+.seccion + .seccion {
+  border-block-start: 1px solid var(--linea);
+}
+
+.seccion-encabezado {
+  margin-block-end: var(--espacio-4);
+}
+
+.seccion-kicker {
+  font-size: var(--paso--1);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--acento);
+  margin-block-end: var(--espacio-1);
+}
+
+.resumen-texto {
+  font-size: var(--paso-1);
+  line-height: 1.55;
+}
+
+/* Competencias: grilla de 5 áreas */
+.competencias-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(16rem, 100%), 1fr));
+  gap: var(--espacio-3);
+}
+
+.competencia {
+  padding: var(--espacio-3);
+  background-color: var(--superficie);
+  border: 1px solid var(--linea);
+  border-radius: var(--radio-2);
+  box-shadow: var(--sombra-1);
+}
+
+.competencia h3 {
+  margin-block-end: var(--espacio-1);
+  color: var(--acento);
+  font-size: var(--paso-0);
+}
+
+.competencia p {
+  font-size: var(--paso--1);
+  color: var(--tenue);
+}
+
+/* Logros destacados */
+.logros-lista {
+  display: grid;
+  gap: var(--espacio-3);
+  counter-reset: logro;
+}
+
+.logros-lista li {
+  position: relative;
+  padding-inline-start: var(--espacio-5);
+  counter-increment: logro;
+}
+
+.logros-lista li::before {
+  content: counter(logro, decimal-leading-zero);
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.15em;
+  font-family: var(--fuente-titulos);
+  font-size: var(--paso-1);
+  font-weight: 600;
+  color: var(--acento);
+  font-variant-numeric: tabular-nums;
+}
+
+/* Formación: títulos, certificaciones e idiomas */
+.formacion-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(18rem, 100%), 1fr));
+  gap: var(--espacio-4);
+}
+
+.formacion-bloque h3 {
+  margin-block-end: var(--espacio-2);
+  padding-block-end: var(--espacio-1);
+  border-block-end: 1px solid var(--linea);
+}
+
+.formacion-bloque li {
+  padding-block: var(--espacio-1);
+  color: var(--texto);
+}
+
+.formacion-bloque li + li {
+  border-block-start: 1px solid var(--linea);
+}
+
+.formacion-idiomas {
+  color: var(--tenue);
+}

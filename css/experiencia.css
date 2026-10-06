@@ -1,0 +1,147 @@
+/* ---------------------------------------------------------------------------
+ * Experiencia: línea de tiempo con la empresa como nodo y los puestos
+ * agrupados bajo cada empresa.
+ * ------------------------------------------------------------------------ */
+
+.linea-tiempo {
+  display: grid;
+  gap: var(--espacio-5);
+}
+
+.empresa {
+  display: grid;
+  grid-template-columns: minmax(12rem, 16rem) 1fr;
+  gap: var(--espacio-4);
+  position: relative;
+  break-inside: avoid;
+}
+
+/* Nodo de la empresa sobre la línea */
+.empresa::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(min(16rem, 100%) + var(--espacio-2));
+  inset-block-start: 0.45em;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: var(--acento);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  display: none;
+}
+
+.empresa-nodo {
+  position: sticky;
+  inset-block-start: calc(var(--encabezado-alto) + var(--espacio-3));
+  align-self: start;
+}
+
+.empresa-nodo h3 {
+  font-size: var(--paso-2);
+  margin-block-end: var(--espacio-1);
+}
+
+.periodo-empresa {
+  font-size: var(--paso--1);
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--acento);
+}
+
+/* Columna de puestos con la línea de tiempo */
+.puestos {
+  position: relative;
+  display: grid;
+  gap: var(--espacio-4);
+  padding-inline-start: var(--espacio-4);
+  border-inline-start: 1px solid var(--linea);
+}
+
+.puesto {
+  position: relative;
+  break-inside: avoid;
+}
+
+/* Marcador del puesto sobre la línea */
+.puesto::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: calc(-1 * var(--espacio-4));
+  inset-block-start: 0.55em;
+  width: 0.625rem;
+  height: 0.625rem;
+  background-color: var(--fondo);
+  border: 2px solid var(--acento);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.puesto-cabecera {
+  margin-block-end: var(--espacio-2);
+}
+
+.puesto-cabecera h4 {
+  font-size: var(--paso-1);
+  margin-block-end: var(--espacio-1);
+}
+
+.cliente {
+  font-size: var(--paso--1);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--tenue);
+}
+
+.periodo {
+  font-size: var(--paso--1);
+  color: var(--tenue);
+}
+
+.puesto-logros {
+  display: grid;
+  gap: var(--espacio-2);
+}
+
+.puesto-logros li {
+  position: relative;
+  padding-inline-start: var(--espacio-3);
+}
+
+.puesto-logros li::before {
+  content: "";
+  position: absolute;
+  inset-inline-start: 0;
+  inset-block-start: 0.62em;
+  width: 0.375rem;
+  height: 1px;
+  background-color: var(--acento);
+}
+
+.nota-experiencia {
+  margin-block-start: var(--espacio-4);
+  font-size: var(--paso--1);
+  color: var(--tenue);
+  font-style: italic;
+}
+
+/* En celular la retícula colapsa a una sola columna */
+@media (max-width: 48rem) {
+  .empresa {
+    grid-template-columns: 1fr;
+    gap: var(--espacio-3);
+  }
+
+  .empresa-nodo {
+    position: static;
+  }
+
+  .puestos {
+    padding-inline-start: var(--espacio-3);
+  }
+
+  .puesto::before {
+    inset-inline-start: calc(-1 * var(--espacio-3));
+  }
+}
