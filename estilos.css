@@ -1,232 +1,139 @@
-/* Presentación sobria de documento de consultoría.
-   Paleta y tipografía en variables para que el modo oscuro (tarea 3) sólo
-   redefina variables. */
+/* ==========================================================================
+   CV Daniela Villafuerte Mena — sistema de diseño
+   Estructura en azul marino profundo, un único acento bronce.
+   Tipografías: Fraunces (títulos) + Inter (cuerpo), con respaldo del sistema.
+   Todos los márgenes y paddings salen de la escala --espacio-*.
+   ========================================================================== */
 
 :root {
-  --fondo: #ffffff;
-  --texto: #2d3748;
-  --titulos: #1e3a5f;
-  --acento: #2b6cb0;
+  /* Color */
+  --fondo: #fcfbfa;
+  --texto: #3b4149;
+  --titulos: #14263f;
+  --tenue: #6d7480;
+  --linea: #e6e3dd;
+  --acento: #8a5a2b;
+
+  /* Tipografía */
+  --fuente-titulos: "Fraunces", Georgia, "Times New Roman", serif;
+  --fuente-cuerpo: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+
+  /* Escala de espaciado: 4 / 8 / 16 / 24 / 40 / 64 */
+  --espacio-1: 4px;
+  --espacio-2: 8px;
+  --espacio-3: 16px;
+  --espacio-4: 24px;
+  --espacio-5: 40px;
+  --espacio-6: 64px;
 }
 
+/* Reset */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   background: var(--fondo);
   color: var(--texto);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: var(--fuente-cuerpo);
   font-size: 16px;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-/* Contenedor de una columna */
+/* Lienzo de una columna con medida cómoda de lectura */
 .hoja {
-  max-width: 760px;
+  max-width: 68ch;
   margin: 0 auto;
-  padding: 32px 16px;
+  padding: var(--espacio-6) var(--espacio-4);
 }
 
-/* Jerarquía visual: nombre > titular > métricas > títulos > cuerpo */
+/* Jerarquía tipográfica */
 h1,
 h2,
 h3,
+h4,
+p {
+  margin: 0;
+}
+
+h1,
+h3,
 h4 {
+  font-family: var(--fuente-titulos);
   color: var(--titulos);
   line-height: 1.2;
-  margin: 0 0 0.35em;
 }
 
 h1 {
-  font-size: 2.1rem;
+  font-size: 2.75rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
 }
 
 h2 {
-  font-size: 1.25rem;
-  margin-top: 2.25rem;
+  margin-bottom: var(--espacio-3);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tenue);
 }
 
 h3 {
-  font-size: 1.1rem;
+  font-size: 1.25rem;
 }
 
 h4 {
-  font-size: 1rem;
+  font-size: 1.05rem;
 }
 
-.titular {
-  font-size: 1.4rem;
-  font-weight: 500;
-  margin: 0.25rem 0 0;
-}
-
-.sector,
-.ubicacion {
-  margin: 0.2rem 0 0;
-}
-
-.contacto {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0.35rem 1.25rem;
-  margin: 1rem 0 0;
+::selection {
+  background: var(--acento);
+  color: #ffffff;
 }
 
 a {
   color: var(--acento);
+  text-decoration: none;
+  transition: color 150ms ease;
   overflow-wrap: anywhere;
 }
 
-p {
-  margin: 0.5rem 0;
+a:hover {
+  text-decoration: underline;
 }
 
-/* Métricas destacadas, cerca del nombre, en fila */
-.metricas {
-  margin-top: 1.5rem;
+/* Metadatos numéricos alineados en tablas de texto */
+.valor,
+.periodo,
+.periodo-empresa {
+  font-variant-numeric: tabular-nums;
 }
 
-.metricas ul {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.metricas li {
-  flex: 1 1 150px;
-  border-left: 3px solid var(--acento);
-  padding-left: 10px;
-}
-
-.metricas .valor {
-  display: block;
-  font-size: 1.3rem;
-  font-weight: 700;
-  color: var(--acento);
-}
-
-.metricas .etiqueta {
-  display: block;
-  font-size: 0.85rem;
-  opacity: 0.85;
-}
-
-/* Secciones */
+/* Regla horizontal fina entre secciones */
 section + section {
-  margin-top: 0.5rem;
+  margin-top: var(--espacio-5);
+  padding-top: var(--espacio-5);
+  border-top: 1px solid var(--linea);
 }
 
-.competencias ul,
-.logros-destacados ul,
-.educacion ul,
-.certificaciones ul,
-.puesto ul {
-  margin: 0.5rem 0;
-  padding-left: 1.25rem;
+/* Ritmo base de párrafos y listas (los componentes finos llegan después) */
+p {
+  margin-bottom: var(--espacio-2);
 }
 
-.competencias li,
-.logros-destacados li,
-.puesto ul li {
-  margin-bottom: 0.4rem;
+ul {
+  margin: 0;
+  padding-left: var(--espacio-4);
 }
 
-.competencias h3,
-.puesto h4 {
-  margin-bottom: 0.15rem;
-}
-
-.competencias p,
-.cliente,
-.periodo,
-.periodo-empresa {
-  margin: 0.15rem 0;
-}
-
-.periodo,
-.periodo-empresa {
-  font-size: 0.9rem;
-  opacity: 0.8;
-}
-
-/* Experiencia */
-.empresa {
-  margin-top: 1.75rem;
-}
-
-.puesto {
-  margin-top: 1.25rem;
-}
-
-.nota {
-  margin-top: 1.75rem;
-  font-size: 0.9rem;
-  opacity: 0.85;
-}
-
-/* Pantallas angostas (375px): sin scroll horizontal */
-@media (max-width: 480px) {
-  .hoja {
-    padding: 20px 16px;
-  }
-
-  h1 {
-    font-size: 1.7rem;
-  }
-
-  .titular {
-    font-size: 1.15rem;
-  }
-}
-
-/* Impresión: exportar el CV a PDF sin fondos oscuros ni puestos partidos */
-@media print {
-  body {
-    background: #ffffff;
-    color: #1a1a1a;
-    font-size: 12pt;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4 {
-    color: #1e3a5f;
-  }
-
-  .metricas .valor,
-  a {
-    color: #2b6cb0;
-  }
-
-  .puesto {
-    break-inside: avoid;
-  }
-
-  .hoja {
-    max-width: none;
-    padding: 0;
-  }
-}
-
-@page {
-  size: auto;
-  margin: 2cm;
-}
-
-/* Modo oscuro: sólo variables, sin duplicar reglas */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --fondo: #1a202c;
-    --texto: #e2e8f0;
-    --titulos: #90cdf4;
-    --acento: #63b3ed;
-  }
+li {
+  margin-bottom: var(--espacio-1);
 }
