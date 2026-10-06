@@ -137,3 +137,75 @@ ul {
 li {
   margin-bottom: var(--espacio-1);
 }
+
+/* ==========================================================================
+   Encabezado: el nombre manda, los datos van en color tenue
+   ========================================================================== */
+
+.encabezado .titular {
+  margin-top: var(--espacio-2);
+  margin-bottom: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--titulos);
+}
+
+.encabezado .datos {
+  margin-top: var(--espacio-3);
+}
+
+.encabezado .sector,
+.encabezado .ubicacion {
+  margin: 0;
+  color: var(--tenue);
+}
+
+.encabezado .contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-2) var(--espacio-4);
+  margin-top: var(--espacio-2);
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   Banda de métricas: fila de 4 columnas separadas por líneas finas
+   ========================================================================== */
+
+.metricas ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.metricas li {
+  flex: 1 1 0;
+  margin: 0;
+  padding: 0 var(--espacio-3);
+}
+
+.metricas li:first-child {
+  padding-left: 0;
+}
+
+.metricas li + li {
+  border-left: 1px solid var(--linea);
+}
+
+.metricas .valor {
+  display: block;
+  font-family: var(--fuente-titulos);
+  font-size: 2rem;
+  line-height: 1.2;
+  color: var(--titulos);
+}
+
+.metricas .etiqueta {
+  display: block;
+  margin-top: var(--espacio-1);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--tenue);
+}
