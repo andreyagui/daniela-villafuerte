@@ -1,0 +1,187 @@
+/* Presentación sobria de documento de consultoría.
+   Paleta y tipografía en variables para que el modo oscuro (tarea 3) sólo
+   redefina variables. */
+
+:root {
+  --fondo: #ffffff;
+  --texto: #2d3748;
+  --titulos: #1e3a5f;
+  --acento: #2b6cb0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+/* Contenedor de una columna */
+.hoja {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+/* Jerarquía visual: nombre > titular > métricas > títulos > cuerpo */
+h1,
+h2,
+h3,
+h4 {
+  color: var(--titulos);
+  line-height: 1.2;
+  margin: 0 0 0.35em;
+}
+
+h1 {
+  font-size: 2.1rem;
+}
+
+h2 {
+  font-size: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+h3 {
+  font-size: 1.1rem;
+}
+
+h4 {
+  font-size: 1rem;
+}
+
+.titular {
+  font-size: 1.4rem;
+  font-weight: 500;
+  margin: 0.25rem 0 0;
+}
+
+.sector,
+.ubicacion {
+  margin: 0.2rem 0 0;
+}
+
+.contacto {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+  margin: 1rem 0 0;
+}
+
+a {
+  color: var(--acento);
+  overflow-wrap: anywhere;
+}
+
+p {
+  margin: 0.5rem 0;
+}
+
+/* Métricas destacadas, cerca del nombre, en fila */
+.metricas {
+  margin-top: 1.5rem;
+}
+
+.metricas ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.metricas li {
+  flex: 1 1 150px;
+  border-left: 3px solid var(--acento);
+  padding-left: 10px;
+}
+
+.metricas .valor {
+  display: block;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--acento);
+}
+
+.metricas .etiqueta {
+  display: block;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+/* Secciones */
+section + section {
+  margin-top: 0.5rem;
+}
+
+.competencias ul,
+.logros-destacados ul,
+.educacion ul,
+.certificaciones ul,
+.puesto ul {
+  margin: 0.5rem 0;
+  padding-left: 1.25rem;
+}
+
+.competencias li,
+.logros-destacados li,
+.puesto ul li {
+  margin-bottom: 0.4rem;
+}
+
+.competencias h3,
+.puesto h4 {
+  margin-bottom: 0.15rem;
+}
+
+.competencias p,
+.cliente,
+.periodo,
+.periodo-empresa {
+  margin: 0.15rem 0;
+}
+
+.periodo,
+.periodo-empresa {
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+/* Experiencia */
+.empresa {
+  margin-top: 1.75rem;
+}
+
+.puesto {
+  margin-top: 1.25rem;
+}
+
+.nota {
+  margin-top: 1.75rem;
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Pantallas angostas (375px): sin scroll horizontal */
+@media (max-width: 480px) {
+  .hoja {
+    padding: 20px 16px;
+  }
+
+  h1 {
+    font-size: 1.7rem;
+  }
+
+  .titular {
+    font-size: 1.15rem;
+  }
+}
