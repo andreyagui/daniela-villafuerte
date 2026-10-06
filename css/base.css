@@ -1,0 +1,129 @@
+/* ---------------------------------------------------------------------------
+ * Base global: reset, tipografía fluida, retícula y detalles de oficio.
+ * Todos los valores provienen de css/variables.css.
+ * ------------------------------------------------------------------------ */
+
+/* Reset */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  font-family: var(--fuente-cuerpo);
+  font-size: var(--paso-0);
+  line-height: 1.65;
+  color: var(--texto);
+  background-color: var(--fondo);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+img,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+/* Tipografía */
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--fuente-titulos);
+  font-weight: 600;
+  line-height: 1.15;
+  color: var(--titulos);
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: var(--paso-4);
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-size: var(--paso-3);
+}
+
+h3 {
+  font-size: var(--paso-1);
+}
+
+h4 {
+  font-size: var(--paso-0);
+}
+
+p {
+  max-width: 68ch;
+}
+
+a {
+  color: var(--acento);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.2em;
+}
+
+a:hover {
+  color: var(--titulos);
+}
+
+/* Retícula */
+.contenedor {
+  max-width: var(--contenedor-ancho);
+  margin-inline: auto;
+  padding-inline: var(--gutter);
+}
+
+/* Detalles de oficio */
+::selection {
+  background-color: var(--acento);
+  color: var(--acento-texto);
+}
+
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+  border-radius: var(--radio-1);
+}
+
+/* Años y cifras con dígitos tabulares */
+.cifras,
+.metrica-valor,
+.periodo,
+.periodo-empresa {
+  font-variant-numeric: tabular-nums;
+}
+
+/* Los anclas no quedan ocultas bajo el encabezado fijo */
+section[id] {
+  scroll-margin-top: var(--encabezado-alto);
+}
+
+/* Movimiento reducido: nada de animaciones ni scroll suave */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
